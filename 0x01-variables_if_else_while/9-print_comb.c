@@ -5,20 +5,24 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char n;
+	int n;
 
 	for (n = 48; n <= 57; n++)
 	{
 		putchar(n);
-		if (n < 9)
+		if (n == 57)
+		{
+		}
+		else
 		{
 			putchar(',');
-			putchar(' ');
+			putchar(32);
 		}
 	}
-	putchar("\n");
+	putchar('\n');
 
 	return (0);
 }
