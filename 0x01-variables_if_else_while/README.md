@@ -26,4 +26,5 @@
 | When I was having that alphabet soup, I never thought that it would pay off | This program will print the alphabet in lowercase, followed by a new line |
 | Numbers | This program will print all single digit numbers of base 10 starting from 0, followed by a new line .|
 | Numberz | This program will prints all single digit numbers of base 10 starting from 0, followed by a new line. |
+| Smile in the mirror | This program will print the lowercase alphabet in reverse, followed by a new line. |
 
