@@ -24,3 +24,6 @@
 | I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game | This program will prints the alphabet in lowercase, followed by a new line. |
 | alphABET | This program will print the alphabet in lowercase, and then in uppercase, followed by a new line. |
 | When I was having that alphabet soup, I never thought that it would pay off | This program will print the alphabet in lowercase, followed by a new line |
+| Numbers | This program will print all single digit numbers of base 10 starting from 0, followed by a new line .|
+| Numberz | This program will prints all single digit numbers of base 10 starting from 0, followed by a new line. |
+
