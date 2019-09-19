@@ -29,4 +29,5 @@
 | Smile in the mirror | This program will print the lowercase alphabet in reverse, followed by a new line. |
 | Hexadecimal | This program will print all the numbers of base 16 in lowercase, followed by a new line. |
 | Patience, persistence and perspiration make an unbeatable combination for success | This program will print all possible combinations of single-digit numbers. |
+| 10. 00...99 | This program will print the numbers from 00 to 99. |
 
