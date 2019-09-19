@@ -1,1 +1,2 @@
-#This repository is for learning C through several task.#
+#holbertonschool-low_level_programming
+This directory is to learn about c.
