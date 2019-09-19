@@ -16,11 +16,11 @@ int main(void)
 
 	LD = n % 10;
 
-	if (n == 0)
+	if (LD == 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, LD);
 	}
-	else if (n < 6)
+	else if (Ld < 6)
 	{
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LD);
 	}
@@ -30,4 +30,4 @@ int main(void)
 	}
 
 	return (0);
-}
+
