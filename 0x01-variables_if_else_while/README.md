@@ -19,6 +19,7 @@
 * What are the purpose of the gcc flags -m32 and -m64
 ---
 | Task name | Task explanation |
+| --- | --- |
 | Positive anything is better than negative nothing | This program will assign a random number to the variable n each time it is executed. |
 | The last digit | This program will assign a random number to the variable n each time it is executed. |
 | I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game | This program will prints the alphabet in lowercase, followed by a new line. |
@@ -30,4 +31,4 @@
 | Hexadecimal | This program will print all the numbers of base 16 in lowercase, followed by a new line. |
 | Patience, persistence and perspiration make an unbeatable combination for success | This program will print all possible combinations of single-digit numbers. |
 | 10. 00...99 | This program will print the numbers from 00 to 99. |
-
+| Inventing is a combination of brains and materials. The more brains you use, the less material you need | This program will prints all possible different combinations of two digits. |
