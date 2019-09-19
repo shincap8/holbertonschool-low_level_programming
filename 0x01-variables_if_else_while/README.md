@@ -28,4 +28,5 @@
 | Numberz | This program will prints all single digit numbers of base 10 starting from 0, followed by a new line. |
 | Smile in the mirror | This program will print the lowercase alphabet in reverse, followed by a new line. |
 | Hexadecimal | This program will print all the numbers of base 16 in lowercase, followed by a new line. |
+| Patience, persistence and perspiration make an unbeatable combination for success | This program will print all possible combinations of single-digit numbers. |
 
