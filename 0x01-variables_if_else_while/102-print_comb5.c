@@ -14,7 +14,7 @@ int main(void)
 		{
 			for (y = w; y <= 57; y++)
 			{
-				if( y == w )
+				if (y == w)
 				{
 					z = x + 1;
 				}
