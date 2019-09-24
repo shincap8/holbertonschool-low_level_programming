@@ -12,10 +12,10 @@ void print_to_98(int n)
 	{
 		for (; n <=98; n++)
 		{
-			fprint("%d", n);
+			printf("%d", n);
 			if (n != 98)
 			{
-				fprint(", ");
+				printf(", ");
 			}
 		}
 	}
@@ -23,13 +23,13 @@ void print_to_98(int n)
 	{
 		for (; n >= 98; n--)
 		{
-			fprint("%d", n);
+			printf("%d", n);
 			if (n != 98)
 			{
-				fprint(", ");
+				printf(", ");
 			}
 		}
 	}
 
-	fprint("\n");
+	printf("\n");
 }
