@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
 * jack_bauer - prints every minute for 24 hours
-* @n: n is an integer
 *
 * Description: This function prints every minute of 24 hours
 */
