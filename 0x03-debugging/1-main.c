@@ -18,7 +18,7 @@ int main(void)
 		putchar(i);/*the variable i isn't increasing so it would get stuck here*/
 	}
 
-	printf("Infinite loop avoided! \\o/\n");
+	printf("Infinite loop avoided! \\o/\n");/*This isn't going to print*/
 
 	return (0);
 }
