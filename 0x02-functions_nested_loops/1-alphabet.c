@@ -3,7 +3,6 @@
 * print_alphabet - Entry point
 *
 * This function prints the alphabet
-*Return void - it returns nothing
 */
 void print_alphabet(void)
 {
