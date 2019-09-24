@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * _abs - computes the absolute value of an integer
-* @int: n is an integer
+* @n: n is an integer
 *
 * Description: This function prints the sign of the variable
 * Return: it return 1 if n is positive, -1 if n is negative, 0 if is 0
