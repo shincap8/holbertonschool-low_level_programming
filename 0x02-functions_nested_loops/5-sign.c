@@ -1,5 +1,11 @@
 #include "holberton.h"
-/* This function prints the ign of a number*/
+/**
+* print_sign - prints the sign of a number
+* @n: n is an integer
+*
+* Description: This function prints the sign of the variable
+* Return: it return 1 if n is positive, -1 if n is negative, 0 if is 0
+*/
 int print_sign(int n)
 {
 	if (n > 0)
