@@ -6,25 +6,27 @@
  */
 int main(void)
 {
-	int i, j, k, add;
-	int mul[1000];
-	int l = 0;
+	int i, j, k, s = 0, r;
+	int m[545];
+
+	r = 0;
 
 	for (i = 3; i < 1024; i = i + 3)
 	{
-		mul[l] = i;
-		l++;
+		m[r] = i;
+		r++;
 	}
 	for (k = 5; k < 1024; k = k + 5)
 	{
-		mul[l] = k;
-		l++;
+		m[r] = k;
+		r++;
 	}
-	for (j = 0; j <= l; j++)
+	for (j = 0; j < r; j++)
 	{
-		add = add + mul[j];
+		s = s + m[j];
 	}
-	printf("%d", add);
+
+	printf("%d", s);
 	printf("\n");
 	return (0);
 }
