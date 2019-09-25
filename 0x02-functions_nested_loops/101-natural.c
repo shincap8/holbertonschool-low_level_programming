@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int i, j, k, add, l;
+	int i, j, k, add;
 	int mul[1000];
-	l = 0;
+	int l = 0;
 
 	for (i = 3; i < 1024; i = i + 3)
 	{
@@ -18,7 +18,7 @@ int main(void)
 	for (k = 5; k < 1024; k = k + 5)
 	{
 		mul[l] = k;
-		l++;	
+		l++;
 	}
 	for (j = 0; j <= l; j++)
 	{
