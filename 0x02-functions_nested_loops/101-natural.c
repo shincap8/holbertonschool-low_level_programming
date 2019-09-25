@@ -7,24 +7,18 @@
 int main(void)
 {
 	int i, j, k, add, l;
-	int *mul;
+	int mul[1000];
 	l = 0;
 
-	for (i = 3; i < 1024; i+3)
-	{		
-		if ((1024 % i) == 0)
-		{
-			mul[l] = i;
-			l++;
-		}
-	}
-	for (k = 5; k < 1024; k+5)
+	for (i = 3; i < 1024; i = i + 3)
 	{
-		if ((1024 % k) == 0)
-		{
-			mul[l] = k;
-			l++;
-		}
+		mul[l] = i;
+		l++;
+	}
+	for (k = 5; k < 1024; k = k + 5)
+	{
+		mul[l] = k;
+		l++;	
 	}
 	for (j = 0; j <= l; j++)
 	{
