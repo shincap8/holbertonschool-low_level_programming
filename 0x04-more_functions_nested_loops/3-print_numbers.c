@@ -4,7 +4,7 @@
 *
 * Description: this function prints the numner from 0 to 9
 */
-void print_numbers(void);
+void print_numbers(void)
 {
 	int n;
 

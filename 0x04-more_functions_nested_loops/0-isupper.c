@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* _islower - check the lower case
+* _isupper - check the lower case
 * @c: integerc
 *
 * Description: this function says if the letter is lower case

@@ -4,11 +4,11 @@
 *
 * Description: This function prints 10 times the numbers, from 0 to 14
 */
-void more_numbers(void);
+void more_numbers(void)
 {
 	int n, x, y, i;
 
-	for (i = 10; i <= 10, i++)
+	for (i = 10; i <= 10; i++)
 	{
 		for (n = 0; n <= 14; n++)
 		{

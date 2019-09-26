@@ -1,4 +1,4 @@
-nclude "holberton.h"
+#include "holberton.h"
 /**
 * print_line - draws a straight line
 * @n: integern
@@ -7,7 +7,7 @@ nclude "holberton.h"
 */
 void print_line(int n)
 {
-	int i,
+	int i;
 
 	if (n > 0)
 	{
