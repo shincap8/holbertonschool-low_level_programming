@@ -20,10 +20,7 @@ void more_numbers(void)
 				_putchar('0' + y);
 			}
 			else
-			{
-				print_numbers()
-			}
 		}
-		_putchar('\n'),
+		_putchar('\n');
 	}
 }
