@@ -6,30 +6,16 @@
  */
 int main(void)
 {
-	int i;
+	int i, j, k;
 
-	for (i = 1; i <= 100; i++)
+	for (i = 2; i <=50829599; i++)
 	{
-		if (!(i % 3) || !(i % 5))
+		for (j = 0; j <= i; i++)
 		{
-			if (!(i % 3))
-			{
-				printf("Fizz");
-			}
-
-			if (!(i % 5))
-			{
-				printf("Buzz");
-			}
-		}
-		else
+			
+		if (!(i % k))
 		{
-			printf("%d", i);
-		}
-
-		if (i < 100)
-		{
-			printf(" ");
+			
 		}
 	}
 
