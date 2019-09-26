@@ -6,20 +6,21 @@
 */
 void more_numbers(void)
 {
-	int n, x, y, i;
+	int n, x, i, z;
 
-	for (i = 10; i <= 10; i++)
+	for (i = 0; i <= 10; i++)
 	{
+		z = 10;
 		for (n = 0; n <= 14; n++)
 		{
 			if (n > 9)
 			{
-				x = n / 10;
-				y = n % 10;
-				_putchar('0' + x);
-				_putchar('0' + y);
+				_putchar(49);
 			}
-			else
+			x = z % 10;
+			_putchar('0' + x);
+			z++;
+		
 		}
 		_putchar('\n');
 	}
