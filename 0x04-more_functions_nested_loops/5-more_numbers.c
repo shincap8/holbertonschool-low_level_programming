@@ -20,7 +20,6 @@ void more_numbers(void)
 			x = z % 10;
 			_putchar('0' + x);
 			z++;
-		
 		}
 		_putchar('\n');
 	}
