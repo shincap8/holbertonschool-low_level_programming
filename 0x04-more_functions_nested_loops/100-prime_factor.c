@@ -6,35 +6,26 @@
  */
 int main(void)
 {
-	int f, a, n, b, c, p;
-	double n;
+	int f, a;
+	long n;
 
 	n = 612852475143;
-	for (a = 2; a <= n; a++)
+	a = 2;
+	while (a <= n)
 	{
-		c = 0;
-		f = 0;
-		for (b = 2; b <= a; b++)
+		if ((n % a) == 0)
 		{
-			if ((a % b) == 0)
-			{
-				c++;
-				if (a == b && c == 1)
-				{
-					f = 1;
-				}
-			}
+			f = a;
+			n = n / a;
+			a = 1;
 		}
-		if (f != 0)
+		if (n == 1)
 		{
-			if ((n % a) == 0)
-			{
-				p = a;
-				n = n / a;
-			}
+			break;
 		}
+		a++;
 	}
-	printf("%d", p);
+	printf("%d", f);
 	printf("\n");
 
 	return (0);
