@@ -20,7 +20,7 @@ void puts2(char *str)
 		{
 			i--;
 		}
-			if(str[j] == '\0')
+			if (str[j] == '\0')
 			{
 			}
 			else
