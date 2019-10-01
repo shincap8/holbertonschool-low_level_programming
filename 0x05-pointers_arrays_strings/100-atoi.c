@@ -10,33 +10,30 @@
 int _atoi(char *s)
 {
 	unsigned int x;
-	int i, j, y;
+	int i, y, sig, j;
 
 	i = 0;
-	j = 1;
+	sig = 1;
+	j = 0;
 	x = 0;
 	while (s[i] != '\0')
 	{
 		y = s[i];
-		printf("%d", y);
-		printf("\n");
-		if(y >= 48 && y <= 57)
+		if (y == 45)
+			sig = sig * -1;
+		if (y >= 48 && y <= 57)
 		{
-			y = s[i] - 48;
-			printf("%d, ", y);			
-			if(x == 0)
-			{
+			y = s[i] - 48;			
+			if (x == 0)
 				x = y;
-				j = j * 10;
-			}
 			else
-			{
-				x = (x * j) + y;
-				j = j * 10;
-			}
+				x = (x * 10) + y;
+			j++;
 		}
+		else if (j > 0)
+			break;
 		i++;
 	}
-	printf("%d", x);
+	x = x * sig;
 	return(x);
 }
