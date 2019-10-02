@@ -1,7 +1,6 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
-* -atoi - convert a string to an integer
+* _atoi - convert a string to an integer
 * @s: integer s
 *
 * Description: this function converts a string to an integer
@@ -23,7 +22,7 @@ int _atoi(char *s)
 			sig = sig * -1;
 		if (y >= 48 && y <= 57)
 		{
-			y = s[i] - 48;			
+			y = s[i] - 48;
 			if (x == 0)
 				x = y;
 			else
@@ -35,5 +34,5 @@ int _atoi(char *s)
 		i++;
 	}
 	x = x * sig;
-	return(x);
+	return (x);
 }
