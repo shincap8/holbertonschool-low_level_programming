@@ -22,7 +22,8 @@ char *leet(char *s)
 			if (x == 0 || y == 0)
 			{
 				s[i] = n[j];
-				break;
+				x = 1;
+				y = 1;
 			}
 		}
 		i++;
