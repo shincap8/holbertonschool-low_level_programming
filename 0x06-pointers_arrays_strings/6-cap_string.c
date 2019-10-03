@@ -35,6 +35,8 @@ char *cap_string(char *s)
 			s[i] = x - 32;
 			c = 0;
 		}
+		else if (i == 0 && x <= 122 && x >= 97)
+			s[i] = x - 32;
 		i++;
 	}
 	return (s);
