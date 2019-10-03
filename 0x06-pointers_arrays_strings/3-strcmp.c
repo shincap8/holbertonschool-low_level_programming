@@ -21,12 +21,12 @@ int _strcmp(char *s1, char *s2)
 		n = j;
 	for (k = 0; k < n ; k++)
 	{
-		if(s1[k] != s2[k])
+		if (s1[k] != s2[k])
 		{
 			r = s1[k] - s2[k];
 			break;
 		}
 	}
-	
+
 	return (r);
 }
