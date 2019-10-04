@@ -40,6 +40,6 @@ void print_number(int n)
 	}
 	else
 	{
-		_putchar('0' + n);
+		_putchar('0' + x);
 	}
 }
