@@ -18,15 +18,17 @@ char *_strstr(char *haystack, char *needle)
 	j--;
 	while (haystack[i])
 	{
-		for (x = 0; x <= j; )
+		for (x = 0; x <= j; x++)
 		{
 			if (needle[x] != haystack[i])
+			{
 				i++;
+				x = -1;
+			}
 			else if (needle[x] == haystack[i] && y == x)
 			{
 				y++;
 				i++;
-				x++;
 			}
 			if (y == j)
 			{
