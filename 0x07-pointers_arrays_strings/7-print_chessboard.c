@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * print_chessboard - prints the chessboard
-* @s: multidimensinal char 
+* @a: multidimensinal char
 *
 * Description: this function prints the chessboard
 */
