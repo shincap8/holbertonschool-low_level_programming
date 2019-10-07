@@ -9,19 +9,25 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
+	int i = 0, j = 0, c = 0;
+	unsigned int x = 0;
 
-	i = 0;
-	j = 0;
-	while (dest[i])
+	while (s[i])
 	{
+		while (accept[j])
+		{
+			if (s[i] == accept[j])
+			{
+				c = 1;
+				x = x + 1;
+			}
+			j++;
+		}
+		j = 0;
+		if (c == 0)
+		break;
+		c = 0;
 		i++;
 	}
-	while (src[j])
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	return (dest);
+	return (x);
 }
