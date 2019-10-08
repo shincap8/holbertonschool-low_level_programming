@@ -13,11 +13,11 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		y = y + a[(size + 1)*i];
+		y = y + a[(size + 1) * i];
 	}
 	for (i = 0; i <= size; i++)
 	{
-		x = x + a[(size - 1)*i];
+		x = x + a[(size - 1) * i];
 	}
 	printf("%d, %d\n", y, x);
 }
