@@ -9,13 +9,15 @@
 */
 void print_diagsums(int *a, int size)
 {
-	int i, x = 0, y = 0, p;
+	int i, x = 0, y = 0;
 
-	p = size - 1;
-	for (i = 0; i <= size i++)
+	for (i = 0; i < size; i++)
 	{
-		x = x + (a + (p*i))[0];
-		y = y + (a + ((size + 1)*i))[0];
+		y = y + a[(size + 1)*i];
+	}
+	for (i = 0; i <= size; i++)
+	{
+		x = x + a[(size - 1)*i];
 	}
 	printf("%d, %d\n", y, x);
 }
