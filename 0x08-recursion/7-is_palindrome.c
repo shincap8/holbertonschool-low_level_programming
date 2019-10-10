@@ -19,16 +19,17 @@ int _strlen_recursion(char *s)
 	}
 }
 /**
-* sqre - gets the square root of a number
-* @x: integer x
-* @y: integer y
+* ispal - function
+* @i: integer i
+* @j: integer j
+* @str: char
 *
 * Description: This function gets the square of a number
 * Return: it returns an int
 */
 int ispal(char *str, int i, int j)
 {
-	if(i == j)
+	if (i == j)
 	{
 		return (1);
 	}
@@ -37,8 +38,9 @@ int ispal(char *str, int i, int j)
 		return (0);
 	}
 	if (i < j)
-	return ispal(str, i + 1, j - 1);
-	return (1);
+	{
+		return (ispal(str, i + 1, j - 1));
+	}
 }
 /**
 * is_palindrome - return 1 if the string is palindrom 0 if not
@@ -50,9 +52,10 @@ int ispal(char *str, int i, int j)
 int is_palindrome(char *s)
 {
 	int n = _strlen_recursion(s);
+
 	if (n == 0)
 	{
 		return (1);
 	}
-	return ispal(s, 0, n - 1);
+	return (ispal(s, 0, n - 1));
 }
