@@ -11,7 +11,7 @@ int sqre(int x, int y)
 {
 	int res;
 
-	if (x < 0 || y == 0)
+	if (x < 0 || y > (x / 2))
 	{
 		return (-1);
 	}
@@ -28,7 +28,7 @@ int sqre(int x, int y)
 		}
 		else
 		{
-			return (sqre(x, y - 1));
+			return (sqre(x, y + 1));
 		}
 	}
 }
