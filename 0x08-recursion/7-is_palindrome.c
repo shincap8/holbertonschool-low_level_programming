@@ -37,10 +37,11 @@ int ispal(char *str, int i, int j)
 	{
 		return (0);
 	}
-	if (i < j)
+	if (i < j + 1)
 	{
 		return (ispal(str, i + 1, j - 1));
 	}
+	return (1);
 }
 /**
 * is_palindrome - return 1 if the string is palindrom 0 if not
