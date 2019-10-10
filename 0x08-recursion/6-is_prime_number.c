@@ -18,10 +18,11 @@ int factor(int x, int y)
 		return (0);
 	}
 	y++;
-	y = factor(x , y);  
+	y = factor(x, y);
+	return (y);
 }
 /**
-* is_prim_number - tell if the number is a prime factor
+* is_prime_number - tell if the number is a prime factor
 * @n: int n
 *
 * Description: This function returns 1 if is prime factor 0 is not
@@ -35,6 +36,6 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		return(factor(n, 2));
+		return (factor(n, 2));
 	}
 }
