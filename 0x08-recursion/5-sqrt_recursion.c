@@ -11,19 +11,25 @@ int sqre(int x, int y)
 {
 	int res;
 
-	res = x / y;
-	if (y == res)
+	if (x < 0 || y == 0)
 	{
-		if ((res * res) == x)
+		return (-1);
+	}
+	else if (x == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		res = x / y;
+		if (y == res && x % res == 0)
 		{
 			return (res);
 		}
 		else
-			return (-1);
-	}
-	else
-	{
-		return (sqre(x, y - 1));
+		{
+			return (sqre(x, y - 1));
+		}
 	}
 }
 /**
@@ -35,16 +41,5 @@ int sqre(int x, int y)
 */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	if (n == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		return (sqre(n, n));
-	}
+	return (sqre(n, n));
 }
