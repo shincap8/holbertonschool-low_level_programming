@@ -41,5 +41,5 @@ int sqre(int x, int y)
 */
 int _sqrt_recursion(int n)
 {
-	return (sqre(n, n));
+	return (sqre(n, 1));
 }
