@@ -9,21 +9,20 @@
 */
 int factor(int x, int y)
 {
-	if (y < x)
+	if (y >= (x / 2))
 	{
-		if ((x % y) == 0)
-		{	
-			return (0);
-		}
-		else
-		{
-			factor (x, (y + 1));
-		}
-	} 
-	return (1);
+		return (1);
+	}
+	if (x % y == 0)
+	{
+		return (0);
+	}
+	y++;
+	y = factor(x, y);
+	return (y);
 }
 /**
-* is_prim_number - tell if the number is a prime factor
+* is_prime_number - tell if the number is a prime factor
 * @n: int n
 *
 * Description: This function returns 1 if is prime factor 0 is not
@@ -31,23 +30,12 @@ int factor(int x, int y)
 */
 int is_prime_number(int n)
 {
-	int res = 0;
-
-	if (n < 0)
-	{
-		return (0);
-	}
-	else if (n == 1)
+	if (n <= 1)
 	{
 		return (0);
 	}
 	else
 	{
-		res = res + factor(n, 2);
+		return (factor(n, 2));
 	}
-	if (res == 0)
-	res = 0;
-	else
-	res = 1;
-	return (res);
 }

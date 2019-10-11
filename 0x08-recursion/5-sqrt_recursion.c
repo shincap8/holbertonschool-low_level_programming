@@ -9,22 +9,17 @@
 */
 int sqre(int x, int y)
 {
-	int res;
-
-	res = x / y;
-	if (y == res)
+	if (y * y == x)
 	{
-		if ((res * res) == x)
-		{
-			return (res);
-		}
-		else
-			return (-1);
+		return (y);
 	}
-	else
+	if (y > (x / 2))
 	{
-		return (sqre(x, y - 1));
+		return (-1);
 	}
+	y++;
+	y = sqre(x, y);
+	return (y);
 }
 /**
 * _sqrt_recursion - returns the natural square root of a number
@@ -39,12 +34,12 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	if (n == 0)
+	else if (n == 0 || n == 1)
 	{
-		return (0);
+		return (n);
 	}
 	else
 	{
-		return (sqre(n, n));
+		return (sqre(n, 1));
 	}
 }
