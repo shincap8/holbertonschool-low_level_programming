@@ -19,10 +19,15 @@ int main(int argc, char *argv[])
 		else
 		{
 			ch = atoi(argv[1]);
-			for (; ch > 0;)
+			while (ch)
 			{
 				if (ch % 25 == 0)
 					ch = ch - 25;
+				else if (ch % 30 == 0)
+				{
+					ch = ch - 30;
+					ch++;
+				}
 				else if (ch % 10 == 0)
 					ch = ch - 10;
 				else if (ch % 5 == 0)
