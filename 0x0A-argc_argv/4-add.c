@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isalpha(*argv[i]) == 0 && atoi(argv[i]) >= 0)
+			if (isalpha(*argv[i]) == 0)
 			{
 				add = add + atoi(argv[i]);
 			}
