@@ -21,18 +21,13 @@ int main(int argc, char *argv[])
 			ch = atoi(argv[1]);
 			while (ch)
 			{
-				if (ch % 25 == 0)
+				if (ch >= 25)
 					ch = ch - 25;
-				else if (ch % 30 == 0)
-				{
-					ch = ch - 30;
-					ch++;
-				}
-				else if (ch % 10 == 0)
+				else if (ch < 25 && ch >= 10)
 					ch = ch - 10;
-				else if (ch % 5 == 0)
+				else if (ch < 10 && ch >= 5)
 					ch = ch - 5;
-				else if (ch % 2 == 0)
+				else if (ch >= 2 && ch < 5)
 					ch = ch - 2;
 				else
 					ch = ch - 1;
