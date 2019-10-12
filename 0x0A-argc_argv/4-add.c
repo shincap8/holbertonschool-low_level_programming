@@ -16,14 +16,14 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isalpha(*argv[i]))
+			if (isalpha(*argv[i]) && atoi(argv[i]) > 0)
 			{
 				add = add + atoi(argv[i]);
 			}
 			else
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
 			}
 		}
 		printf("%d\n", add);
