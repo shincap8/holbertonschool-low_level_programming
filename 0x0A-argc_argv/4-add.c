@@ -10,20 +10,27 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, add = 0;
+	int i, j, add = 0;
+	char *p;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isalpha(*argv[i]) == 0)
+			p = argv[i];
+			j = 0;
+			while (p[j])
+			{
+				if (isdigit(p[j]) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
+				j++;
+			}
+			if (atoi(argv[i]) >= 0)
 			{
 				add = add + atoi(argv[i]);
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
 			}
 		}
 		printf("%d\n", add);
