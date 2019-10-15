@@ -13,7 +13,6 @@ char *_strdup(char *str)
 
 	while (str[i])
 		i++;
-	i++
 	p = malloc(i);
 	if (str == NULL || p == NULL)
 	{
