@@ -10,16 +10,12 @@ int length(char *p)
 {
 	int i = 0, s = 0, c = 0;
 
-	while (p[i])
+	while (p[i++])
 	{
 		if (p[i] != ' ')
 			s = 1;
 		else if (p[i] == ' ' && s == 1)
-		{
-			c++;
-			s = 0;
-		}
-		i++;
+			c++, s = 0;
 	}
 	return	(c);
 }
@@ -40,13 +36,10 @@ char **strtow(char *str)
 	x = malloc((sizeof(char *) * cs) + 1);
 	if (x == NULL)
 		return (NULL);
-	while (str[i])
+	while (str[i++])
 	{
 		if (str[i] != ' ')
-		{
-			s = 1;
-			cw++;
-		}
+			s = 1, cw++;
 		else if (str[i] == ' ' && s == 1)
 		{
 			cw++;
@@ -54,37 +47,24 @@ char **strtow(char *str)
 			if (x[j] == NULL)
 			{
 				for (; j >= 0; j--)
-				{
 					free(x[j]);
-				}
 				free(x);
 				return (NULL);
 			}
-			cw = 0;
-			s = 0;
-			j++;
+			cw = 0, s = 0, j++;
 		}
-		i++;
 	}
-	i = 0;
-	j = 0;
-	s = 0;
-	while (str[i])
+	i = 0, j = 0, s = 0;
+	while (str[i++])
 	{
 		if (str[i] != ' ')
 		{
-			x[j][k] = str[i];
-			k++;
-			s = 1;
+			x[j][k] = str[i], k++, s = 0;
 		}
 		else if (str[i] == ' ' && s == 1)
 		{
-			x[j][k] = '\0';
-			k = 0;
-			j++;
-			s = 0;
+			x[j][k] = '\0', k = 0, s = 0, j++;
 		}
-		i++;
 	}
 	return (x);
 }
