@@ -61,14 +61,11 @@ char **strtow(char *str)
 	while (str[i])
 	{
 		if (str[i] != ' ')
-		{
 			x[j][k] = str[i], k = k + 1, s = 1;
-		}
 		else if (str[i] == ' ' && s == 1)
-		{
 			x[j][k] = '\0', k = 0, s = 0, j = j + 1;
-		}
 		i++;
 	}
+	x[j] = '\0';
 	return (x);
 }
