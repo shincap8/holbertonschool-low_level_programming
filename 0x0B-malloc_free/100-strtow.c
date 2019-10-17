@@ -12,8 +12,12 @@ int length(char *p)
 
 	while (p[i])
 	{
-		if (p[i] != ' ')
+		if (p[i] != ' ' || p[i] == '\0')
+		{
 			s = 1;
+			if (p[i + 1] == '\0')
+				c++;
+		}
 		else if (p[i] == ' ' && s == 1)
 		{
 			c++;
@@ -21,7 +25,7 @@ int length(char *p)
 		}
 		i++;
 	}
-	return	(c);
+	return (c);
 }
 /**
  * **strtow - split a string into words
@@ -46,9 +50,9 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 			s = 1, cw = cw + 1;
-		else if (str[i] == ' ' && s == 1)
+		if ((str[i] == ' ' || str[i + 1] == '\0') && s == 1)
 		{
-			cw = cw + 1, x[j] = malloc(sizeof(char) * cw);
+			x[j] = malloc(sizeof(char) * (cw + 1));
 			if (x[j] == NULL)
 			{
 				for (; j >= 0; j--)
@@ -65,7 +69,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 			x[j][k] = str[i], k = k + 1, s = 1;
-		else if (str[i] == ' ' && s == 1)
+		if ((str[i] == ' ' || str[i + 1] == '\0') && s == 1)
 			x[j][k] = '\0', k = 0, s = 0, j = j + 1;
 		i++;
 	}
