@@ -10,12 +10,16 @@ int length(char *p)
 {
 	int i = 0, s = 0, c = 0;
 
-	while (p[i++])
+	while (p[i])
 	{
 		if (p[i] != ' ')
 			s = 1;
 		else if (p[i] == ' ' && s == 1)
-			c++, s = 0;
+		{
+			c++;
+			s = 0;
+		}
+		i++;
 	}
 	return	(c);
 }
@@ -32,18 +36,16 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	cs = length(str);
-	x = malloc((sizeof(char *) * cs) + 1);
+	cs = length(str), x = malloc((sizeof(char *) * cs) + 1);
 	if (x == NULL)
 		return (NULL);
-	while (str[i++])
+	while (str[i])
 	{
 		if (str[i] != ' ')
-			s = 1, cw++;
+			s = 1, cw = cw + 1;
 		else if (str[i] == ' ' && s == 1)
 		{
-			cw++;
-			x[j] = malloc(sizeof(char) * cw);
+			cw = cw + 1, x[j] = malloc(sizeof(char) * cw);
 			if (x[j] == NULL)
 			{
 				for (; j >= 0; j--)
@@ -51,20 +53,22 @@ char **strtow(char *str)
 				free(x);
 				return (NULL);
 			}
-			cw = 0, s = 0, j++;
+			cw = 0, s = 0, j = j + 1;
 		}
+		i++;
 	}
 	i = 0, j = 0, s = 0;
-	while (str[i++])
+	while (str[i])
 	{
 		if (str[i] != ' ')
 		{
-			x[j][k] = str[i], k++, s = 0;
+			x[j][k] = str[i], k = k + 1, s = 1;
 		}
 		else if (str[i] == ' ' && s == 1)
 		{
-			x[j][k] = '\0', k = 0, s = 0, j++;
+			x[j][k] = '\0', k = 0, s = 0, j = j + 1;
 		}
+		i++;
 	}
 	return (x);
 }
