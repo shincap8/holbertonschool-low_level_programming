@@ -36,7 +36,10 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	cs = length(str), x = malloc((sizeof(char *) * cs) + 1);
+	cs = length(str)
+	if (cs == 0)
+		return (NULL);
+	x = malloc((sizeof(char *) * cs) + 1);
 	if (x == NULL)
 		return (NULL);
 	while (str[i])
@@ -66,6 +69,6 @@ char **strtow(char *str)
 			x[j][k] = '\0', k = 0, s = 0, j = j + 1;
 		i++;
 	}
-	x[j] = '\0';
+	x[j][k] = '\0';
 	return (x);
 }
