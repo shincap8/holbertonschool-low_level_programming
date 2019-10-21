@@ -59,30 +59,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog = malloc(sizeof(struct dog));
 	if (new_dog == NULL)
 	{
-		free(new_dog);
 		return (NULL);
 	}
-	if (name == NULL)
-		(*new_dog).name = "";
 	else
 	{
 		newna = malloc((_strlen(name)) + 1);
 		if (newna == NULL)
 		{
-			free(newna);
 			free(new_dog);
 			return (NULL);
 		}
 		newna = _strcpy(newna, name);
-	}
-	if (owner == NULL)
-		(*new_dog).owner = "";
-	else
-	{
 		newow = malloc((_strlen(owner)) + 1);
 		if (newow == NULL)
 		{
-			free(newow);
+			free(newna);
 			free(new_dog);
 			return (NULL);
 		}
