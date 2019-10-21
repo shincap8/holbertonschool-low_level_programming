@@ -2,29 +2,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* *_strncpy - copies a string
-* @dest: character dest
+* *_strcpy - copies a string
+* @dest: character des
 * @src: character src
-* @n: integer n
 *
-* Description: this function copies a string
+* Description: this function writes a string in reverse
 * Return: it returns a char
 */
-char *_strncpy(char *dest, char *src, int n)
+char *_strcpy(char *dest, char *src)
 {
 	int i, j;
 
-	j = 0;
-	while (src[j])
-		j++;
-	for (i = 0; i < n; i++)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		if (i >= j)
-			dest[i] = '\0';
-		else
-			dest[i] = src[i];
+		i++;
+	}
+	for (j = 0; j <= i; j++)
+	{
+		dest[j] = src[j];
 	}
 	return (dest);
+}
+/**
+* _strlen- returns the length of a string
+* @s: character s
+*
+* Description: this function returns the length of a string
+* Return: returns i that is the count of the characters in the string|
+*/
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 /**
 * *new_dog - Creates a new dog
@@ -37,7 +53,6 @@ char *_strncpy(char *dest, char *src, int n)
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i = 0, j = 0;
 	char *newow, *newna;
 	struct dog *new_dog;
 
@@ -51,31 +66,30 @@ dog_t *new_dog(char *name, float age, char *owner)
 		(*new_dog).name = "";
 	else
 	{
-		while (name[i])
-			i++;
-		newna = malloc(i + 1);
+		newna = malloc((_strlen(name)) + 1);
 		if (newna == NULL)
 		{
 			free(newna);
 			free(new_dog);
 			return (NULL);
 		}
-		(*new_dog).name = *_strncpy(newna, name, i);
+		newna = _strcpy(newna, name);
 	}
 	if (owner == NULL)
 		(*new_dog).owner = "";
 	else
 	{
-		while (owner[j])
-			j++;
-		newow = malloc(j + 1);
+		newow = malloc((_strlen(owner)) + 1);
 		if (newow == NULL)
 		{
 			free(newow);
 			free(new_dog);
 			return (NULL);
 		}
-		(*new_dog).owner = *_strncpy(newow, owner, j);
+		newow = _strcpy(newow, owner);
 	}
+	(*new_dog).name = newna;
+	(*new_dog).owner = owner;
+	(*new_dog).age = age;
 	return (new_dog);
 }
