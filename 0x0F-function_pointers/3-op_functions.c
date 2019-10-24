@@ -24,10 +24,10 @@ int op_add(int a, int b)
 */
 int op_sub(int a, int b)
 {
-        int calc;
+	int calc;
 
-        calc = a - b;
-        return (calc);
+	calc = a - b;
+	return (calc);
 }
 /**
 * op_mul- product between two integers
@@ -39,10 +39,10 @@ int op_sub(int a, int b)
 */
 int op_mul(int a, int b)
 {
-        int calc;
+	int calc;
 
-        calc = a * b;
-        return (calc);
+	calc = a * b;
+	return (calc);
 }
 /**
 * op_div- division between two integers
@@ -54,23 +54,23 @@ int op_mul(int a, int b)
 */
 int op_div(int a, int b)
 {
-        int calc;
+	int calc;
 
-        calc = a / b;
-        return (calc);
+	calc = a / b;
+	return (calc);
 }
 /**
 * op_mod- remainder of the division between two integers
 * @a: integer a
 * @b: integer b
 *
-* Description: this function calculates the remainder of the division between two integers
+* Description: this function gets the remainder of a division
 * Return: the result of the operation
 */
 int op_mod(int a, int b)
 {
-        int calc;
+	int calc;
 
-        calc = a % b;
-        return (calc);
+	calc = a % b;
+	return (calc);
 }
