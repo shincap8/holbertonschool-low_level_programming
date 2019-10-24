@@ -12,15 +12,16 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, calc;
-	char *o = argv[2];
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	char *o = argv[2];
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 	if ((*o != '+' && *o != '-' && *o != '*' && *o != '/' && *o != '%')
 || o[1] != '\0')
 	{
