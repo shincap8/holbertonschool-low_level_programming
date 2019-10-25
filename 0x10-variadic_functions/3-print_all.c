@@ -1,12 +1,11 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* array_iterator- execute a function on each element of an array
-* @array: array of int
-* @size: size of the array
-* @action: pointer to a function
+* print_all- prints anything
+* @format: format
+* @...: argumnets passed
 *
-* Description: this function execute a function on each element of an array
+* Description: this function prints anything
 */
 void print_all(const char * const format, ...)
 {
@@ -19,25 +18,26 @@ void print_all(const char * const format, ...)
 	va_start(list, format);
 	while (i < n)
 	{
-		switch(format[i])
+		switch (format[i])
 		{
-			case 'c' :
+			case 'c':
 				printf("%c", va_arg(list, int));
 				break;
-			case 'i' :
+			case 'i':
 				printf("%d", va_arg(list, int));
 				break;
-			case 'f' :
+			case 'f':
 				printf("%f", va_arg(list, double));
 				break;
-			case 's' :
+			case 's':
 				s = va_arg(list, char *);
 				if (s == NULL)
 					s = "(nil)";
 				printf("%s", s);
 				break;
 		}
-		if ((format[i] == 'i' || format[i] == 'c' || format[i] == 'f' || format[i] == 's') && i != (n - 1))
+		if ((format[i] == 'i' || format[i] == 'c' ||
+format[i] == 'f' || format[i] == 's') && i != (n - 1))
 			printf(", ");
 		i++;
 	}
