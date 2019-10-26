@@ -22,13 +22,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nill)");
 		else
 			printf("%s", string);
-		if (i == (n - 1))
-			printf("\n");
-		else
-		{
-			if (separator != NULL)
+		if (separator != NULL && i < n - 1)
 				printf("%s", separator);
-		}
 	}
+	printf("\n");
 	va_end(list);
 }
