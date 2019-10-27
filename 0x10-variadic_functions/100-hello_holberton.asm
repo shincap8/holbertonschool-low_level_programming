@@ -1,5 +1,5 @@
 section .data
-	str db "Hello, Holberton",10,0
+	str db "Hello, Holberton",0xa
 	len equ $ - str
 
 section .text
@@ -12,6 +12,5 @@ _start:
 	mov eax,4
 	int 0x80
 
-	mov ebx,0
-	mov eax,1
+	mov eax,0
 	int 0x80
