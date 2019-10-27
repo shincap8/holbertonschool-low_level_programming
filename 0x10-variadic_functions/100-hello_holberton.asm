@@ -1,8 +1,5 @@
-section .data
-	text db 'Hello, Holberton',0xa
-
 section .text
-	global_start
+	global _start
 
 _start:
 	mov edx,17
@@ -12,3 +9,6 @@ _start:
 	int 0x80
 	mov eax,0
 	int 0x80
+
+section.data
+	text db 'Hello, Holberton',0xa
