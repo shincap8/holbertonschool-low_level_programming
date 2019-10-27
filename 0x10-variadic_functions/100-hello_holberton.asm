@@ -1,17 +1,14 @@
 section .data
-	str db "Hello, Holberton",10,0
-	len equ $ - str
+	str db "Hello, Holberton",0xa
 
 section .text
 	global_start
 
 _start:
-	mov edx,len
+	mov edx,17
 	mov ecx,str
 	mov ebx,1
 	mov eax,4
 	int 0x80
-
-	mov ebx,0
-	mov eax,1
+	mov eax,0
 	int 0x80
