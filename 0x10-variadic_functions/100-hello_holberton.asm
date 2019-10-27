@@ -1,12 +1,12 @@
 section .data
-	str db "Hello, Holberton",0xa
+	text db 'Hello, Holberton',0xa
 
 section .text
 	global_start
 
 _start:
 	mov edx,17
-	mov ecx,str
+	mov ecx,text
 	mov ebx,1
 	mov eax,4
 	int 0x80
