@@ -1,12 +1,14 @@
 section .data
-	text db 'Hello, Holberton',0xa
+	text db 'Hello, Holberton',10
 section .text
 	global main 
 main:
-	mov ebx,1
-	mov ecx,text
-	mov edx,17
-	mov eax,4
+	mov rax,1
+	mov rdi, 1
+	mov rsi,text
+	mov rdx,17
 	syscall
-	mov eax,0
+
+	mov rax,60
+	xor rdi,0
 	syscall
