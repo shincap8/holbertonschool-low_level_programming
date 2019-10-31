@@ -10,14 +10,14 @@
 */
 void free_list(list_t *head)
 {
-	list_t *aux;
+	list_t *aux = head;
 
-	while (head->next)
+	while (aux)
 	{
-		aux = head;
 		free(head->str);
 		free(head);
 		head = aux->next;
+		aux = aux->next;
 	}
 	free(head);
 }
