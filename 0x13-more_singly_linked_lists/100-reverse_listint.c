@@ -26,5 +26,5 @@ listint_t *reverse_listint(listint_t **head)
 		follow = *head;
 	}
 	*head = aux;
-	return (follow);
+	return (*head);
 }
