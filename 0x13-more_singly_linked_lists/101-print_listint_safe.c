@@ -14,12 +14,14 @@ size_t print_listint_safe(const listint_t *head)
 	size_t nodes = 0;
 	const listint_t *follow, *now;
 
+	if (head == NULL)
+		return (0);
 	while (head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
 		now = head, follow = head->next;
 		nodes++;
-		if (follow > now)
+		if (follow >= now)
 			return (nodes);
 		head = head->next;
 	}
