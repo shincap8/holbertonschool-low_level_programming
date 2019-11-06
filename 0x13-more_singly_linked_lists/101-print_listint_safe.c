@@ -11,18 +11,21 @@
 */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes = 0;
+	size_t nodes = 1;
 	const listint_t *follow, *now;
 
 	if (head == NULL)
 		return (0);
 	while (head)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
 		now = head, follow = head->next;
+		if (follow >= now);
+		{
+			printf("-> [%p] %d\n", (void *)head, head->n);
+			return(nodes);
+		}
+		printf("[%p] %d\n", (void *)head, head->n);
 		nodes++;
-		if (follow >= now)
-			return (nodes);
 		head = head->next;
 	}
 
