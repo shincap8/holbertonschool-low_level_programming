@@ -16,7 +16,7 @@ int main(int ac, char **av)
 	fd = open(av[1], O_RDONLY, 0600);
 	if (fd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	fd1 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd1 = open(av[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664);
 	if (fd1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	while (reader == 1024)
