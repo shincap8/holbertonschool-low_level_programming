@@ -4,8 +4,8 @@
 * @head: pointer to the first element
 * @index: index where the node is added
 *
-* Description: this function prints all elements of a list
-* Return: the number of nodes in the list
+* Description: this function deletes a node in x position
+* Return: 1 if succes -1 if not
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -21,19 +21,25 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (-1);
 		*head = tmp->next;
 		if (tmp->next != NULL)
-			tmp->next->prev = NULL;
+			(*head)->prev = NULL;
 		free(tmp);
 		return (1);
 	}
 	while (tmp)
 	{
-		if (i == index)
+		if (i == index && tmp->next != NULL)
 		{
 			remove = tmp->next;
 			tmp->next = remove->next;
 			remove->next->prev = tmp;
 			free(remove);
 			return (1);
+		}
+		if (i == index && tmp->next == NULL)
+		{
+			tmp->prev->next = NULL;
+			free(remove)
+			return(1)
 		}
 		i++;
 		tmp = tmp->next;
