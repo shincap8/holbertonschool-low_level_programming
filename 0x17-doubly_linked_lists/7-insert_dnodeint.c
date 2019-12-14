@@ -5,14 +5,13 @@
 * @idx: index where the node is added
 * @n: int of the new
 *
-* Description: this function prints all elements of a list
-* Return: the number of nodes in the list
+* Description: this function inserts a node in x position
+* Return: the new node
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 1;
-	dlistint_t *new;
-	dlistint_t *aux = *h;
+	dlistint_t *new, *tmp, *aux = *h;
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
@@ -20,19 +19,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->n = n;
 	if (idx == 0)
 	{
-		new->next = aux;
+		new->next = *h;
 		new->prev = NULL;
+		(*h)->prev = new;
 		*h = new;
 		return (new);
 	}
 	while (aux)
 	{
+		tmp = aux->next;
 		if (i == idx)
 		{
-			new->next = aux->next;
+			new->next = tmp;
 			new->prev = aux;
 			aux->next = new;
-			new->next->prev = new;
+			tmp->prev = new;
 			return (new);
 		}
 		i++;
