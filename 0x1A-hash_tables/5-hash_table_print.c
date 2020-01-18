@@ -9,7 +9,7 @@ void hash_table_print(const hash_table_t *ht)
 	int lists = 0, count = 0;
 	hash_node_t *aux;
 
-	if (ht != NULL)
+	if (ht != NULL && ht->size != 0)
 	{
 		for (i = 0; i < ht->size; i++)
 		{
