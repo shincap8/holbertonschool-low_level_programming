@@ -3,7 +3,6 @@
 * hash_table_get - Retrieves a value associated with a key
 * @ht: pointer to hash table
 * @key: key of the value
-* @value: value paired with the key
 * Return: returns a 1 if succeed otherwise 0
 */
 char *hash_table_get(const hash_table_t *ht, const char *key)
@@ -18,7 +17,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 			aux = ht->array[i];
 			while (aux)
 			{
-				if(strcmp(key, (const char*)aux->key) == 0)
+				if (strcmp(key, (const char *)aux->key) == 0)
 					return (aux->value);
 				aux = aux->next;
 			}
