@@ -34,8 +34,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(key, (const char *)aux->key) == 0)
 			{
-				delete_node_at_index(&aux, i);
-				break;
+				free(aux->value);
+				aux->value = strdup(value);
+				return (1);
 			}
 			else
 			{
@@ -47,42 +48,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 	}
 	return (1);
-}
-/**
-* delete_node_at_index- delete a new node in x position
-* @head: pointer to the first element
-* @index: index where the node is added
-*
-* Description: this function deletes a node in x position
-* Return: the number of nodes in the list
-*/
-int delete_node_at_index(hash_node_t **head, unsigned int index)
-{
-	unsigned int i = 1;
-	hash_node_t *remove, *tmp;
-
-	if (head == NULL)
-		return (-1);
-	tmp = *head;
-	if (index == 0)
-	{
-		if (tmp == NULL)
-			return (-1);
-		*head = tmp->next;
-		free(tmp);
-		return (1);
-	}
-	while (tmp)
-	{
-		if (i == index)
-		{
-			remove = tmp->next;
-			tmp->next = remove->next;
-			free(remove);
-			return (1);
-		}
-		i++;
-		tmp = tmp->next;
-	}
-	return (-1);
 }
