@@ -33,7 +33,7 @@ void hash_table_print(const hash_table_t *ht)
 						printf(", ");
 					aux = aux->next;
 				}
-				if (count < lists)
+				if (count <= lists)
 					printf(", ");
 			}
 		}
