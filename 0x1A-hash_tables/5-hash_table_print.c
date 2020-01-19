@@ -24,16 +24,15 @@ void hash_table_print(const hash_table_t *ht)
 			if (ht->array[i] != NULL)
 			{
 				aux = ht->array[i];
+				count++;
 				while (aux)
 				{
 					printf("'%s': '%s'", aux->key, aux->value);
-					count++;
-
 					if (aux->next != NULL)
 						printf(", ");
 					aux = aux->next;
 				}
-				if (count <= lists)
+				if (count < lists)
 					printf(", ");
 			}
 		}
