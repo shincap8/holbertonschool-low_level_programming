@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 /**
 * interpolation_search - searches for a value using the Interpolation algorithm
 * @array: pointer of the first element of the array
